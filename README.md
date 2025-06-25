@@ -1,146 +1,173 @@
-Gerne, hier sind die kürzeren und umstrukturierten Texte für dein Projektportfolio und dein GitHub README-File.
-
----
-
-## Text für dein Projektportfolio (Kürzere Version)
-
-**Project: Document Assistant with Azure AI Foundry (RAG Application)**
-
-**Project Overview**
-
-In Unternehmen fallen riesige Mengen unstrukturierter Daten in Form von PDFs und Dokumenten an. Herkömmliche Large Language Models (LLMs) können diese internen Informationen nicht nutzen, was zu ineffizienter Informationsbeschaffung und ungenauen Antworten führt. Dieses Projekt löst dieses Problem durch die Entwicklung eines "Dokumenten-Assistenten" – einer Retrieval Augmented Generation (RAG)-Anwendung. Dieser Assistent beantwortet Fragen ausschließlich auf Basis bereitgestellter Dokumente, um präzise und kontextbezogene Antworten zu liefern, ohne sich auf das allgemeine Wissen des LLM zu verlassen.
-
-**Key Metrics (KPIs)**
-
-*   **Answer Accuracy:** Percentage of correct, document-supported responses.
-*   **Response Time:** Time taken to generate an answer.
-*   **User Satisfaction:** Feedback on usefulness and ease of use.
-*   **Document Coverage:** Breadth of information retrievable.
-*   **Cost Efficiency:** Optimization of Azure resource consumption.
-
-**Project Goals & Outcomes**
-
-Das Hauptziel war der Aufbau eines zuverlässigen, dokumentenbasierten Frage-Antwort-Systems. Wir haben eine End-to-End RAG-Anwendung mit Microsoft Azure AI Foundry entwickelt, die fortschrittliche KI-Lösungen in einer robusten Cloud-Umgebung demonstriert. Durch die Automatisierung des Q&A-Endpoints mittels Prompt Flow und die Integration in einen benutzerdefinierten Copilot wurde eine nahtlose und intuitive Benutzererfahrung geschaffen.
-
-**Key Achievements:**
-
-*   **Kontextuelle Genauigkeit:** Antworten werden direkt aus den Dokumenten abgeleitet, was die Vertrauenswürdigkeit erheblich steigert.
-*   **Skalierbare Lösung:** Nutzung von Azure-Diensten für eine robuste und skalierbare Infrastruktur.
-*   **Vereinfachte KI-Entwicklung:** Azure AI Foundry optimiert die Bereitstellung und Verwaltung von KI-Modellen.
-*   **Vielseitige Anwendung:** Das Framework ist anpassbar für spezialisierte Assistenten in verschiedenen Branchen.
-*   **Nahtlose Integration:** Die Anbindung an Copilot Studio und Power Automate ermöglicht die Einbettung in bestehende Workflows.
-
-**What was done:**
-
-Dieses Projekt umfasste die umfassende Entwicklung und Bereitstellung eines Dokumenten-Assistenten (RAG-Anwendung) auf Microsoft Azure:
-
-1.  **Azure Ressourcenbereitstellung:** Erstellung einer dedizierten Ressourcengruppe, Bereitstellung von Azure AI Foundry (inkl. Azure AI Service und Storage Account) und Azure AI Search.
-2.  **Modell-Deployment:** Bereitstellung eines Embedding-Modells (`text-embedding-ada-002`) und eines Large Language Models (`gpt-35-turbo-16k`) aus Azure OpenAI.
-3.  **Daten-Ingestion & Indexierung:** Hochladen von PDF-Dokumenten und Erstellung eines Suchindex in Azure AI Search.
-4.  **Modell-Testing:** Überprüfung der Modellantworten im Azure AI Foundry Playground.
-5.  **Prompt Flow Entwicklung & Deployment:** Erstellung eines Prompt Flows zur Orchestrierung der RAG-Anwendung, Behebung von Berechtigungsproblemen (Managed Identity) und Deployment als sicherer Endpoint.
-6.  **Endpoint-Testing:** Verifizierung der Endpoint-Funktionalität mittels Postman.
-7.  **Copilot-Integration:** Aufbau eines benutzerdefinierten Copilots (Power Virtual Agent) in Copilot Studio, Integration über Power Automate und Anbindung an Demo- und benutzerdefinierte Websites.
-
----
-
-## GitHub README-File Text (Kürzere Version)
-
-```markdown
 # Document Assistant with Azure AI Foundry: Building a Custom RAG Solution
 
 ## Overview and Architecture
 
 <!-- Placeholder for your architecture diagram image. Replace with your actual image URL -->
-<!-- Example: ![Doc Assistant Architecture](https://github.com/your-username/your-repo/assets/your-image-id/doc_assistant_architecture.png) -->
-![Doc Assistant Architecture Diagram Placeholder](https://via.placeholder.com/800x400?text=Doc+Assistant+Architecture+Diagram)
+<!-- Example: ![Doc Assistant Architecture](https://github.com/your-username/your-repo/assets/your-image-id/doc_assistant_architecture.png ) -->
+![Doc Assistant Architecture Diagram Placeholder](https://via.placeholder.com/800x400?text=Doc+Assistant+Architecture+Diagram )
 
-### Business Context
+### Business Case
 
-Organizations often struggle to extract specific information from vast amounts of unstructured internal documents. Traditional LLMs lack this proprietary knowledge, leading to generic or inaccurate responses. This project tackles this by developing a "Document Assistant" – a Retrieval Augmented Generation (RAG) application – that answers user questions *only* based on provided documents, ensuring accuracy and relevance for internal use cases.
+In corporate environments, vast amounts of critical information are stored in unstructured documents like PDFs. Traditional Large Language Models (LLMs) often lack access to this proprietary knowledge, leading to generic or inaccurate responses. This project addresses this by building a "Document Assistant" – a Retrieval Augmented Generation (RAG) application – that answers user questions based *only* on provided documents, ensuring accuracy and relevance for internal use cases like legal queries, medical information, or custom support.
 
-### Key Components
+### Architecture Overview
 
-This solution leverages Microsoft Azure's comprehensive AI ecosystem:
+This solution leverages Microsoft Azure's comprehensive AI ecosystem to create a robust and scalable RAG application.
 
-1.  **Azure AI Foundry (formerly Azure AI Studio)**: Central platform for AI project management.
-2.  **Azure OpenAI Service**: Provides LLMs and embedding models.
-3.  **Azure AI Search**: Powers document indexing and retrieval.
-4.  **Azure Storage Account**: Stores raw documents.
-5.  **Prompt Flow**: Orchestrates the RAG process.
-6.  **Endpoint Deployment**: Exposes the RAG solution as an API.
-7.  **Copilot Studio (formerly Power Virtual Agents)**: User-facing conversational interface.
-8.  **Power Automate**: Connects Copilot to the Prompt Flow endpoint.
-9.  **Web Integration**: Embeds the Copilot into websites for accessibility.
+1.  **Azure AI Foundry (formerly Azure AI Studio)**: The central platform for managing AI projects, model deployments, and data indexing.
+2.  **Azure OpenAI Service**: Provides access to powerful LLMs (e.g., GPT-3.5 Turbo) and embedding models.
+3.  **Azure AI Search**: Powers the semantic search and indexing of documents.
+4.  **Azure Storage Account**: Stores the raw PDF documents.
+5.  **Prompt Flow**: Orchestrates the RAG process, defining the logic for retrieving relevant document chunks and generating responses.
+6.  **Endpoint Deployment**: Exposes the RAG solution as a callable API.
+7.  **Copilot Studio (formerly Power Virtual Agents)**: Serves as the user-facing conversational interface.
+8.  **Power Automate**: Connects the Copilot to the Prompt Flow endpoint.
+9.  **Web Integration**: Embeds the Copilot into demo and custom websites for accessibility.
+
+### Key Concepts
+
+-   **Retrieval Augmented Generation (RAG)**: A technique that enhances LLM responses by retrieving relevant information from a knowledge base (your documents) before generating an answer. This prevents hallucination and grounds responses in factual data.
+-   **Embedding Models**: Convert text into numerical vectors, allowing for semantic similarity searches.
+-   **Large Language Models (LLMs)**: Generate human-like text responses based on the retrieved context.
 
 ### Key Benefits
 
--   **Contextual Accuracy**: Answers are directly derived from provided documents.
--   **Simplified Development**: Microsoft's integrated tools streamline the process.
--   **Scalability**: Built on Azure for robust and scalable infrastructure.
--   **Versatility**: Adaptable for various industry-specific assistants.
+-   **Contextual Accuracy**: Answers are directly derived from provided documents, ensuring high accuracy and trustworthiness.
+-   **No Need for Multiple Roles**: Microsoft's integrated tools allow a single individual to manage the entire process.
+-   **Widespread Adoption**: Built on Microsoft infrastructure, increasing integration possibilities and career opportunities.
+-   **Ease of Use**: User-friendly tools simplify implementation and management.
+-   **Clear & Simple Steps**: The development process is structured and easy to follow for both beginners and experts.
 
 ---
 
 ## Step-by-Step Implementation
 
-### 1. Azure Resource Setup
+### Step 1: Create Azure Resource Group
 
--   Create a **Resource Group**.
--   Provision **Azure AI Foundry** (auto-creates AI Service & Storage Account).
--   Create **Azure AI Search** resource.
+1.  Open Azure Portal and create a new **Resource Group** to organize all project resources.
 
 ---
 
-### 2. Model Deployment
+### Step 2: Create Azure AI Foundry (Azure AI Studio)
 
--   Deploy **Embedding Model** (`text-embedding-ada-002`) and **LLM** (`gpt-35-turbo-16k`) from Azure OpenAI within AI Foundry.
-
----
-
-### 3. Data Ingestion & Indexing
-
--   Upload PDF documents to AI Foundry.
--   Create a **Search Index** in Azure AI Search, linking documents to the embedding model.
+1.  Search for and create **Azure AI Studio** (now known as Azure AI Foundry).
+2.  During creation, it will automatically provision an **Azure AI Service** and a **Storage Account**.
+3.  Launch Azure AI Studio and create a new **Project** within it.
 
 ---
 
-### 4. Model Testing (Playground)
+### Step 3: Create Azure AI Search
 
--   Test the integrated LLM and search index in the AI Foundry Playground, using "Hybrid" search.
-
----
-
-### 5. Prompt Flow Development & Deployment
-
--   Clone "Multi-round Q&A" sample flow.
--   **Enable Managed Identity** for AI Studio and grant "Storage Blob Data Reader" role to resolve permissions.
--   Configure flow nodes (index, LLM connection).
--   Deploy the Prompt Flow as a secure **endpoint**.
+1.  In the same Resource Group, create a new **Azure AI Search** resource.
+2.  Select the appropriate pricing tier (Standard recommended for production, Free/Basic for testing if available).
 
 ---
 
-### 6. Endpoint Testing
+### Step 4: Model Deployment
 
--   Retrieve Endpoint URL and API Key.
--   Test functionality using **Postman** to send POST requests.
+1.  Navigate to your Azure AI Studio project.
+2.  Deploy the following models from Azure OpenAI:
+    -   **Embedding Model**: `text-embedding-ada-002`
+    -   **Large Language Model (LLM)**: `gpt-35-turbo-16k` (or GPT-4 if available and desired)
 
 ---
 
-### 7. Copilot Studio Integration
+### Step 5: Add Data
 
--   Create a custom **Copilot** in Copilot Studio.
--   Build a **Power Automate flow** to connect Copilot to the Prompt Flow endpoint (HTTP POST request).
--   Integrate Copilot with a **demo website** and a **custom website**.
+1.  In Azure AI Studio, go to the "Data Index" tab.
+2.  Upload your PDF documents (e.g., `hotel_info.pdf`) to the associated Storage Account.
+
+---
+
+### Step 6: Create Index
+
+1.  In Azure AI Studio, navigate to the "Index" tab.
+2.  Create a new index:
+    -   Select the data you uploaded in Step 5.
+    -   Choose your **Azure AI Search** resource.
+    -   Select your **Azure OpenAI** connection (for embeddings).
+    -   Ensure "Create Vector Index" is selected.
+
+---
+
+### Step 7: Playground - Test Model Response
+
+1.  Go to the "Playground" tab in Azure AI Studio.
+2.  Select the deployed LLM.
+3.  Add your data by selecting the index created in Step 6.
+4.  **Crucially, select "Hybrid" as the search type.**
+5.  Test with questions related to your documents (e.g., "Where can I stay in New York?"). Verify correct, document-grounded answers.
+
+---
+
+### Step 8: Prompt Flow Setup
+
+1.  Go to the "Prompt Flow" tab in Azure AI Studio.
+2.  Create a new flow by cloning the "Multi-round Q&A on your data" sample.
+3.  **Enable Managed Identity**:
+    -   Go to your Azure AI Studio resource in the Azure Portal.
+    -   Under "Identity", enable the **System-assigned managed identity**.
+    -   Go to your Storage Account resource.
+    -   Under "Access Control (IAM)", add a role assignment: assign the "Storage Blob Data Reader" role to your Azure AI Studio's managed identity. This resolves permission errors for Prompt Flow.
+4.  Configure the Prompt Flow:
+    -   Start a compute session.
+    -   In the "lookup_rectangular_box" node, select your registered index.
+    -   In the "chat_with_context" node, select your OpenAI connection and deployed LLM.
+    -   Set query type to "Hybrid".
+5.  Test the Prompt Flow using the chat icon in the top right corner.
+
+---
+
+### Step 9: Prompt Flow Deployment
+
+1.  Once the Prompt Flow is tested, click "Deploy" from the Prompt Flow interface.
+2.  Provide a name for the endpoint and keep default settings (Key authentication).
+
+---
+
+### Step 10: Endpoint Testing (Postman)
+
+1.  Retrieve the **Endpoint URL** and **API Key** from the deployed Prompt Flow endpoint details in Azure AI Studio.
+2.  Use **Postman** (or a similar API client) to send a POST request to the endpoint:
+    -   Method: `POST`
+    -   URL: Your Endpoint URL
+    -   Authorization: `Bearer Token` (use your API Key)
+    -   Body: `raw` -> `JSON` (e.g., `{"question": "Where can I stay in New York?"}`)
+3.  Verify that the correct response is received, confirming the endpoint's functionality.
+
+---
+
+### Step 11: Copilot Studio Integration
+
+1.  Open **Copilot Studio** (formerly Power Virtual Agents).
+2.  Create a new **Agent** (Copilot).
+3.  Disable the default OpenAI integration.
+4.  Create a new **Topic** (e.g., "RAG Topic") with relevant trigger phrases.
+5.  Within the topic, integrate with **Power Automate**:
+    -   Create a new Power Automate flow.
+    -   This flow will receive the user's question from Copilot.
+    -   It will then make an **HTTP POST request** to your Prompt Flow endpoint (using the URL and API Key).
+    -   Parse the JSON response from the endpoint.
+    -   Return the generated answer back to Copilot.
+6.  Test the Copilot to ensure it correctly retrieves answers via Power Automate.
+
+---
+
+### Step 12: Copilot Integration with Websites
+
+1.  In Copilot Studio, go to "Settings" -> "Security" -> "Authentication" and select "No authentication" for demo purposes.
+2.  Publish your Copilot.
+3.  Integrate with a **Demo Website**: Copy the provided demo website link from Copilot Studio and test.
+4.  Integrate with a **Custom Website**: Copy the embed code from Copilot Studio and paste it into your website's source code.
 
 ---
 
 ## Key Considerations
 
--   **Security**: Implement robust authentication for production.
--   **Cost Optimization**: Monitor resource consumption.
--   **Scalability**: Choose appropriate Azure service tiers.
--   **Prompt Engineering**: Fine-tune configurations for optimal response quality.
+-   **Security**: For production environments, implement robust authentication and authorization for endpoints and data access.
+-   **Cost Optimization**: Monitor resource consumption (especially LLM tokens and compute sessions) to manage costs.
+-   **Scalability**: Design for scalability by choosing appropriate Azure service tiers and managing concurrent requests.
+-   **Document Management**: Establish a clear process for updating and re-indexing documents as your knowledge base evolves.
+-   **Prompt Engineering**: Fine-tune Prompt Flow configurations and system prompts for optimal response quality.
 
-This project demonstrates building a custom RAG-based Document Assistant using Microsoft Azure AI Foundry, showcasing a powerful application of generative AI for enterprise knowledge retrieval.
-```
+This project provides a comprehensive guide to building a custom RAG-based Document Assistant using Microsoft Azure AI Foundry, demonstrating a powerful application of generative AI for enterprise knowledge retrieval.
