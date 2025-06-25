@@ -4,7 +4,6 @@
 
 <!-- Placeholder for your architecture diagram image. Replace with your actual image URL -->
 <!-- Example: ![Doc Assistant Architecture](https://github.com/your-username/your-repo/assets/your-image-id/doc_assistant_architecture.png ) -->
-![Doc Assistant Architecture Diagram Placeholder](https://via.placeholder.com/800x400?text=Doc+Assistant+Architecture+Diagram )
 
 ### Business Case
 
@@ -171,3 +170,21 @@ This solution leverages Microsoft Azure's comprehensive AI ecosystem to create a
 -   **Prompt Engineering**: Fine-tune Prompt Flow configurations and system prompts for optimal response quality.
 
 This project provides a comprehensive guide to building a custom RAG-based Document Assistant using Microsoft Azure AI Foundry, demonstrating a powerful application of generative AI for enterprise knowledge retrieval.
+
+
+![1](https://github.com/user-attachments/assets/a56bd908-1fb7-4007-b702-f32ad12897ef)
+
+![2](https://github.com/user-attachments/assets/019efe51-a304-4df7-aba6-99ae60d38214)
+
+![5](https://github.com/user-attachments/assets/72b7c3d3-685e-4281-9e97-5570ac033c4d)
+
+![7](https://github.com/user-attachments/assets/11bb9588-dcc5-42e6-b278-6d320dfa6dab)
+
+![8](https://github.com/user-attachments/assets/df4d668e-07d7-4e9a-9216-f05237f8cd63)
+
+![9](https://github.com/user-attachments/assets/2c9d4400-05e6-4403-930d-412a0f9f05ad)
+
+![10](https://github.com/user-attachments/assets/0f437c9f-f6d4-4664-ba5a-f9a13818414a)
+
+
+
