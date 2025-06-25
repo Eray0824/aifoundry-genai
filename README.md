@@ -5,6 +5,9 @@
 <!-- Placeholder for your architecture diagram image. Replace with your actual image URL -->
 <!-- Example: ![Doc Assistant Architecture](https://github.com/your-username/your-repo/assets/your-image-id/doc_assistant_architecture.png ) -->
 
+![azure ai foundry project ](https://github.com/user-attachments/assets/ef17a282-5a4b-4d5b-ace5-6c3e05ca60fd)
+
+
 ### Business Case
 
 In corporate environments, vast amounts of critical information are stored in unstructured documents like PDFs. Traditional Large Language Models (LLMs) often lack access to this proprietary knowledge, leading to generic or inaccurate responses. This project addresses this by building a "Document Assistant" – a Retrieval Augmented Generation (RAG) application – that answers user questions based *only* on provided documents, ensuring accuracy and relevance for internal use cases like legal queries, medical information, or custom support.
